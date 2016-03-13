@@ -1,0 +1,45 @@
+\newpage
+\section{Round Trip Time}
+\label{RTT}
+\subsection{Remote Machine Description}
+
+\subsection{Methodology}
+
+We conducted the Round Trip Time experiment under both remote and local loopback scenarios. Meanwhile, we compare the performance of our machine with TCP protocol and ICMP protocol to understand the RTT measurements.  And for both scenarios, we try to estimate and evaluate the baseline network performance and the overhead of OS software. 
+
+To measure the round trip time, we set up a client and a server that adopt TCP socket for sending and receiving data packets. For remote round trip time measurement, we run the server program on our remote machine described above and run the client program on our local machine. Both of the machines are connected to the same wireless router. For local loopback round trip time measurement, both of the client and the server program is set on the same local machine. 
+
+For both of the scenarios, we adopted the same method. The server will first create a socket port and prepare itself to be ready for connection. Then the client will try to connect to the server through TCP IP address. Once the connection is established, the client starts to transmit a 56 byte string in a single packet. We deliberately choose to the data size to be the same as the packet payload of a ping command to perform accurate comparison. Once the server accepts the packet, it send a 64 byte acknowledge message back to server. After each successful transmission, the client will measure the total time consumed in CPU cycles. For unsuccessful transmissions, we simply discard the timing information obtained. We repeated the transmission for 100 times and take the average. Then we also conducted experiments on "ping" command with the exact same configuration for both remote and local scenarios. 
+
+\subsection{Prediction}
+
+Round trip time measures the time eclipse start from the transmission of a packet to the successful reception of an acknowledge message about this transmission. For TCP protocol, the overhead is much larger than ICMP because it is a connection protocol that requires handshaking to establish and terminate connections. It also has larger packet size which contain the same amount of message data. Therefore, the RTT for TCP must be larger than a ping if they transmit the same message to the same server. Then we measured the RTT for 200 pings which sends a 56 byte message to local server, which is around 0.06 ms. Note that since the transmission on local server will only touch the virtual network interface, neither TCP packet nor ping command packet go through physical network interface. Therefore,  there will be 0 hardware overhead and hence, we predict that the RTT for TCP on local host is at around 0.08ms on local server.
+
+For remote server TCP RTT, the RTT for both TCP and ping will be larger due to the packet overhead through physical network layers. Same as what we did for local host scenario, we also measured 200 ping time to our remote server. The average ping time is around 1.24ms. Since the ping time to transmit a packet locally only consumes 0.06ms, it's obvious that the overhead of crossing the physical network dominates the total RTT. The overhead will be significantly larger for TCP protocol because there is a multiple-way handshaking at the beginning and the end of the transmission. In general, transmitting a same size packet through TCP protocol requires 3 times more round trips because of the connection overheads. Therefore, the RTT for transmitting a 56 byte message to a remote server through TCP protocol will be at least $3 * 0.8 = 2.4ms$.
+
+\subsection{Result}
+
+We recorded our RTT measurement for 100 transmission using both CPU cycles and time as unit. The RTT of TCP and ping under both loopback and remote scenarios are listed in Table \ref{rtt_result}.
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+& ICMP & TCP \\ \hline
+RTT Local (cycle) & -- & 21342 \\ \hline
+RTT Local (ms) & 0.0685 & 0.097 \\ \hline
+RTT Remote (cycles) & -- & 9359966 \\ \hline
+RTT Remote (ms) & 1.243 &  4.25 \\ \hline
+Transmission Rate (Mbps) & --  & 0.104 \\ \hline
+\end{tabular}
+\caption{RTT experimental results for both TCP and ICMP}
+\label{rtt_result}
+\end{table}
+
+\subsection{Discussion}
+
+Our estimations are close to the practice. The RTT for TCP locally is 0.097ms, which is just slightly higher than our estimation. The remote RTT for TCP is 4.25 ms, which also satisfies our estimation. 
+
+From the comparison of local and remote RTT results, we can deduce that the overhead of OS software doesn't have too much influence to the transmission performance. Instead, what really affects the transmission efficiency is the overhead of transmission over network, which is incurred through the transmission process through network card interface and the routers in the network. Even though the server and the client are in the same LAN, the overhead is still the dominant of the remote transmission delay. 
+
+Now compare the real transmission rate and the ideal peak transmission rate of our network, we found that the real transmission rate is way too small than the maximum throughput. The maximum bandwidth of our tested network is 20Mbps. Our measurements indicates that the remote transmission rate is only $$\frac{(56*8*10^{-6})}{0.00425} = 0.104\text{Mbps}$$. Despite the influence from other processes which are occupying the bandwidth, the discrepancy is mainly because the overheads required for reading and creating packet header information. Moreover, since we only embedded 56 bytes data in each packet, while the max transmission unit of TCP is 1460 bytes, the small payload can be considered as wasting overhead. 

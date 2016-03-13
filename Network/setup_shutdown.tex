@@ -1,0 +1,42 @@
+\newpage
+\section{Connection Setup and Shutdown}
+
+\subsection{Description}
+
+In TCP protocol, each connection establishment requires the server and the client to make a 3-way handshake. Each connection shutdown requires them to make a 4-way handshakes. In this section, we measure the CPU cycle time and the absolute time for both these processes. 
+
+\subsection{Methodology}
+
+We use the same method and programs to test the RTT. We create a server, a client and a socket as the simplest configuration. We first initiate a socket on both ends, then the client starts to connect with the server and transmit a packet. The transmitted packet size doesn't influence neither the setup time nor the shutting time of the connection. Therefore, we will shut down the connection after just one transmission. To measure the setting up time, we record the cycle difference between the start and the end of the connect() function. To measure the shut down time, we record the cycle difference between the start and the end of the close() function. We repeat the process for 100 time both on local server and remote server and take the mean and standard deviation for discussion.
+
+\subsection{Prediction}
+
+We predict both the setting up time and the shut down time using the RTT time calculated from section \ref{RTT}. Each packet transmission for a round trip costs 0.097ms locally and 4.25ms remotely. It takes 3 round trips for each connection setup and 4 round trips for each connection shutdown, totally 7 round trips. Therefore, it should take around $0.097 * 7 = 0.679ms$ locally and $4.25 * 7 = 29.75ms$ remotely. These estimation actually only provide a lower bound for practical values. And intuitively, the real time eclipse will be bigger than what we expect. 
+
+\subsection{Result}
+
+The measurements are listed in Table \ref{setupshutdown}. For each action, we show both cycle time and absolute time for both remote and local connections. 
+
+\begin{table}[htbp]
+\centering
+\begin{tabular}{|c|c|c|}
+\hline
+& Set up & Shut down \\ \hline
+Local (cycle) & 2340836 & 8584 \\ \hline
+Local (ms) & 1.064 & 0.0039 \\ \hline
+Remote (cycles) & 321242771 & 10690 \\ \hline
+Remote (ms) & 41.375 &  0.0045 \\ \hline
+Local Standard Deviation (ms) & 1.424 & 0.0027\\ \hline
+Remote Standard Deviation (ms) & 0.78 & 142.67 \\ \hline
+\end{tabular}
+\caption{Experimental results for connection setup and shutdown}
+\label{setupshutdown}
+\end{table}
+
+\subsection{Discussion}
+
+The local setup time is slightly larger than what we expected. The possible reason is because there are bigger overhead incurred during the handshake process. The remote setup time is also slightly larger than what we expected with the same possible reason. 
+
+The very interesting fact is that both local and remote shutdown time are very short. We expected the shutdown time be longer than setup time because there are more handshaking made during close() process. But with a deeper look at what is really going on when closing a socket, we found that instead of completing a 4-way handshake, the client simply takes an "emergency" way to close the socket. In this way, only one packet is sent to the server from the client containing a RST message informing the server to abandon the connection immediately. After sending this message, the client will also immediately abandon the connection. Therefore, the shutdown time of a remote connection basically equals to the shutdown time of a local connection. And this time approximately equals to the RTT for a local loopback transmission. The standard deviation indicates that our measurements are basically accurate. 
+
+
