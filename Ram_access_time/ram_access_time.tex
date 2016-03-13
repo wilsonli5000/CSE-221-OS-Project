@@ -1,0 +1,108 @@
+\newpage
+\section{RAM Access Time}
+
+\subsection{Description}
+Cache and memory are the essential parts for an operating system. The overall performance of an operating system heavily relies on the access speed of its memory hierarchy. Modern computers usually has three levels of caches and a DDR3 main memory. The access speed of caches will be much faster than main memory. And the access speed to lower level caches will be faster than higher level caches. In this section, we will conduct experiments to test the access time of all levels of memories. The result will be useful for lower level program design. 
+
+\subsection{Method}
+The method we adapted to test the actual RAM access time is the same as described in the lmbench paper. In this project, we focus on measuring the back-to-back-load time, which is the time that each load takes. As discussed in previous sections, our testing machine is MacBook Pro (Retina, 15-inch, Mid 2014), which has a 32 KB L1 cache, a 256KB L2 cache and a 6MB L3 cache on a single processor. Therefore, we measured the access latency of all three caches as well as the main memory. Other cache such as Instruction cache is not considered.  
+
+We use integer accessing to measure the RAM latency. In order to fully test three caches and main memory, we vary the array size from 256B to 256MB. To measure the effect of cache line size and prefetching, we vary the array stride size from 32B to 1MB.
+\begin{lstlisting}
+for(f = arraystride; f < arraysize; f += arraystride)
+  {
+    arr[index] = f;
+    index = f;
+  }
+\end{lstlisting}
+
+The second step is to measure the overhead and the access time of reading each integer. The only thing we have to worry here is the effect of prefetching. To trick the operating system and to have the smallest prefetching effect, we randomly access the array. And we repeat this step for 100 times to calculate the mean value. The following is the pseudo-code.
+\begin{lstlisting}
+time1 = rdtsc();
+for ( int i = 0; i < 100000000; i++ ) 
+  {
+    idx = array[idx];
+  }
+time2 = rdtsc();
+total_time = time2 – time1;
+access_time = (total_time – overhead) / step_numbers – loop_overhead;
+\end{lstlisting}
+
+\subsection{Prediction}
+Generally speaking, L1 will be much faster than L2. L2 will be faster than L3. The slowest will be the main memory and the latency will be much higher than the previous three. 
+
+We predict the access latency will be:
+L1 cache: 4 cycles;\\
+L2 cache: 15 cycles;\\
+L3 cache: 50 cycles;\\
+Main memory: 120 cycles.\\
+
+\subsection{Results}
+Table below shows the access latency obtained from the experiment with stride size equals 1KB.
+\begin{center}
+ \begin{tabular}{||c | c||}
+ \hline
+Memory Size & Mean Access Latency (cycles)\\ [0.5ex]
+ \hline\hline
+ 256B & 4\\
+ \hline
+ 512B & 3\\
+ \hline
+ 1KB & 4\\
+ \hline
+ 2KB & 4\\
+ \hline
+ 4KB & 5\\
+ \hline
+ 8KB & 5\\
+ \hline
+ 16KB & 5\\
+ \hline
+ 32KB & 5\\
+ \hline
+ 64KB & 15\\
+ \hline
+ 128KB & 17\\
+ \hline
+ 256KB & 18\\
+ \hline
+ 512KB & 18\\
+ \hline
+ 1MB & 33\\
+ \hline
+ 2MB & 76\\
+ \hline
+ 4MB & 94\\
+ \hline
+ 8MB & 105\\
+ \hline
+ 16MB & 105\\
+ \hline
+ 32MB & 106\\
+ \hline
+ 64MB & 106\\
+ \hline
+ 128MB & 110\\
+ \hline
+ 256MB & 112\\
+ \hline
+ \end{tabular}
+\end{center}
+
+The plot below shows the relationship between latency and memory size with different stride sizes.
+
+\begin{figure}[hbtp]
+    \centering
+    \includegraphics[width=0.8\textwidth]{latency}
+    \caption{Preprocessing Performance Comparison}
+\end{figure}
+
+\subsection{Discussion}
+From the figure we can see that no matter what the stride size we choose, the latency cycles are stable and relatively low when the array size is smaller than the size of L1 cache. This is because that all the access data are stored in L1 cache and we only need L1 cache line for reading. 
+
+When the stride size is smaller that the size of L1 cache, such as 256B, 1KB and 8KB, the behavior of lines are similar. For these lines, with the array size grows, the latency will grow stair wise. When the array size is smaller than the size of L2 cache, the read operation will use L1 and L2 cache lines. Therefore, the access time is stable. When the array size is bigger than the size of L2 cache but smaller than L3 cache, the read operation will use cache lines from all three caches. Therefore, the access time is still stable but higher. Then when the array size grows to be bigger than the size of L3 cache, the data starts to be stored in main memory. Therefore, the access time will dramatically grow. We can also see the size of each cache from the figure. The L1 cache is 32KB, L2 cache is 256KB and L3 cache is around 6MB, which agrees with the fact.
+
+When the stride size becomes bigger than L2 or L3 cache size, such as 256KB and 1MB, the access time will not grow until the array size reaches the stride size. This is because that when stride size is bigger than array size, we are actually doing sequential data access. Then because of the prefetching effect, we will keep using L1 cache lines to read data. Therefore, the access time will be stable. When the array size becomes bigger than the stride size, the behavior becomes similar with the condition discussed in the previous paragraph. 
+
+\subsection{Reference}
+http://www.bitmover.com/lmbench/
