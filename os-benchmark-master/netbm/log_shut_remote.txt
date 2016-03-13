@@ -1,0 +1,700 @@
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 8628604
+Enter rtt function
+1
+2
+3
+RTT = 23999046
+Response from server:
+4
+Exit rtt function
+shutdown = 10323
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 9486428
+Enter rtt function
+1
+2
+3
+RTT = 26195459
+Response from server:
+4
+Exit rtt function
+shutdown = 19515
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 9705390
+Enter rtt function
+1
+2
+3
+RTT = 8897093
+Response from server:
+4
+Exit rtt function
+shutdown = 11671
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 13543032
+Enter rtt function
+1
+2
+3
+RTT = 14260702
+Response from server:
+4
+Exit rtt function
+shutdown = 11099
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 6359710
+Enter rtt function
+1
+2
+3
+RTT = 9030960
+Response from server:
+4
+Exit rtt function
+shutdown = 10260
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 6923303
+Enter rtt function
+1
+2
+3
+RTT = 10447772
+Response from server:
+4
+Exit rtt function
+shutdown = 11027
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 6436621
+Enter rtt function
+1
+2
+3
+RTT = 8248760
+Response from server:
+4
+Exit rtt function
+shutdown = 10067
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 9807118
+Enter rtt function
+1
+2
+3
+RTT = 11130008
+Response from server:
+4
+Exit rtt function
+shutdown = 14141
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 7093420
+Enter rtt function
+1
+2
+3
+RTT = 19326213
+Response from server:
+4
+Exit rtt function
+shutdown = 16224
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 8027108
+Enter rtt function
+1
+2
+3
+RTT = 12347071
+Response from server:
+4
+Exit rtt function
+shutdown = 25925
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 18743308
+Enter rtt function
+1
+2
+3
+RTT = 12001967
+Response from server:
+4
+Exit rtt function
+shutdown = 9313
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 10048541
+Enter rtt function
+1
+2
+3
+RTT = 8230156
+Response from server:
+4
+Exit rtt function
+shutdown = 13974
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 9782675
+Enter rtt function
+1
+2
+3
+RTT = 17033914
+Response from server:
+4
+Exit rtt function
+shutdown = 21271
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 2598233373
+Enter rtt function
+1
+2
+3
+RTT = 8012278
+Response from server:
+4
+Exit rtt function
+shutdown = 10810
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 19967059
+Enter rtt function
+1
+2
+3
+RTT = 8032670
+Response from server:
+4
+Exit rtt function
+shutdown = 60923
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 6445723
+Enter rtt function
+1
+2
+3
+RTT = 10497974
+Response from server:
+4
+Exit rtt function
+shutdown = 13734
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 281469182
+Enter rtt function
+1
+2
+3
+RTT = 10971848
+Response from server:
+4
+Exit rtt function
+shutdown = 4620360
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 6246272
+Enter rtt function
+1
+2
+3
+RTT = 8049431
+Response from server:
+4
+Exit rtt function
+shutdown = 10522
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 8725475
+Enter rtt function
+1
+2
+3
+RTT = 8182070
+Response from server:
+4
+Exit rtt function
+shutdown = 11143
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 314329996
+Enter rtt function
+1
+2
+3
+RTT = 331103590
+Response from server:
+4
+Exit rtt function
+shutdown = 11492
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 19313627
+Enter rtt function
+1
+2
+3
+RTT = 14698189
+Response from server:
+4
+Exit rtt function
+shutdown = 11152
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 9757008
+Enter rtt function
+1
+2
+3
+RTT = 10868213
+Response from server:
+4
+Exit rtt function
+shutdown = 9024
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 224026178
+Enter rtt function
+1
+2
+3
+RTT = 8881594
+Response from server:
+4
+Exit rtt function
+shutdown = 9641
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 8164092
+Enter rtt function
+1
+2
+3
+RTT = 7565381
+Response from server:
+4
+Exit rtt function
+shutdown = 10594
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 6733597
+Enter rtt function
+1
+2
+3
+RTT = 10965436
+Response from server:
+4
+Exit rtt function
+shutdown = 10695
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 33945109
+Enter rtt function
+1
+2
+3
+RTT = 316444816
+Response from server:
+4
+Exit rtt function
+shutdown = 9574
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 8888003
+Enter rtt function
+1
+2
+3
+RTT = 8342927
+Response from server:
+4
+Exit rtt function
+shutdown = 12200
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 6497075
+Enter rtt function
+1
+2
+3
+RTT = 9873065
+Response from server:
+4
+Exit rtt function
+shutdown = 15279
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 302277234
+Enter rtt function
+1
+2
+3
+RTT = 7928500
+Response from server:
+4
+Exit rtt function
+shutdown = 12844
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 8562508
+Enter rtt function
+1
+2
+3
+RTT = 12624993
+Response from server:
+4
+Exit rtt function
+shutdown = 11353
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 6705689
+Enter rtt function
+1
+2
+3
+RTT = 10144938
+Response from server:
+4
+Exit rtt function
+shutdown = 12364
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 8132500
+Enter rtt function
+1
+2
+3
+RTT = 12492264
+Response from server:
+4
+Exit rtt function
+shutdown = 12567
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 325349709
+Enter rtt function
+1
+2
+3
+RTT = 8286376
+Response from server:
+4
+Exit rtt function
+shutdown = 10631
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 6306852
+Enter rtt function
+1
+2
+3
+RTT = 10824299
+Response from server:
+4
+Exit rtt function
+shutdown = 8606
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 6781535
+Enter rtt function
+1
+2
+3
+RTT = 9949467
+Response from server:
+4
+Exit rtt function
+shutdown = 10991
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 20675419
+Enter rtt function
+1
+2
+3
+RTT = 375103150
+Response from server:
+4
+Exit rtt function
+shutdown = 14254
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 287443142
+Enter rtt function
+1
+2
+3
+RTT = 18120608
+Response from server:
+4
+Exit rtt function
+shutdown = 12868
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 8956824
+Enter rtt function
+1
+2
+3
+RTT = 9544008
+Response from server:
+4
+Exit rtt function
+shutdown = 12312
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 5994431
+Enter rtt function
+1
+2
+3
+RTT = 13587352
+Response from server:
+4
+Exit rtt function
+shutdown = 10533
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 7527234
+Enter rtt function
+1
+2
+3
+RTT = 338040076
+Response from server:
+4
+Exit rtt function
+shutdown = 10953
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 12420760
+Enter rtt function
+1
+2
+3
+RTT = 7227581
+Response from server:
+4
+Exit rtt function
+shutdown = 18414
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 7737301
+Enter rtt function
+1
+2
+3
+RTT = 15145168
+Response from server:
+4
+Exit rtt function
+shutdown = 12442
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 10999294
+Enter rtt function
+1
+2
+3
+RTT = 343566164
+Response from server:
+4
+Exit rtt function
+shutdown = 15960
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 6901579
+Enter rtt function
+1
+2
+3
+RTT = 14619284
+Response from server:
+4
+Exit rtt function
+shutdown = 10112
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 13923270
+Enter rtt function
+1
+2
+3
+RTT = 14000104
+Response from server:
+4
+Exit rtt function
+shutdown = 13860336
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 306568410
+Enter rtt function
+1
+2
+3
+RTT = 14879693
+Response from server:
+4
+Exit rtt function
+shutdown = 10146
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 9968507
+Enter rtt function
+1
+2
+3
+RTT = 16983795
+Response from server:
+4
+Exit rtt function
+shutdown = 15146
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 9117241
+Enter rtt function
+1
+2
+3
+RTT = 14219521
+Response from server:
+4
+Exit rtt function
+shutdown = 10567
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 317472692
+Enter rtt function
+1
+2
+3
+RTT = 23626978
+Response from server:
+4
+Exit rtt function
+shutdown = 9868
+1234567891234567891234567891234567891234567891234567891234567891
+Enter rtt function1
+Enter rtt function2
+Client start connections...
+setup= 11579366
+Enter rtt function
+1
+2
+3
+RTT = 20029146
+Response from server:
+4
+Exit rtt function
+shutdown = 10664
